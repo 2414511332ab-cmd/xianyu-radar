@@ -1,0 +1,42 @@
+name: 使用咨询与反馈
+description: 咨询产品、提出建议或反馈问题
+title: '[咨询/反馈] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢关注闲鱼雷达。请勿提交密码、Cookie、验证码、Webhook、授权码或个人联系方式。截图请先遮挡隐私。
+  - type: dropdown
+    id: category
+    attributes:
+      label: 类型
+      options:
+        - 使用咨询
+        - 功能建议
+        - 问题反馈
+    validations:
+      required: true
+  - type: dropdown
+    id: product
+    attributes:
+      label: 关注品类
+      options:
+        - 显卡
+        - 手机
+        - 内存
+        - 硬盘
+        - 多品类或其他
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 具体需求或问题
+      description: 描述使用场景、预期结果；报错时可附操作步骤与脱敏后的截图。
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 软件版本与运行环境（问题反馈时填写）
+      placeholder: Windows 版本、软件版本、浏览器名称
